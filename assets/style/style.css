@@ -1,0 +1,23 @@
+/* BASIC STYLES HERE */
+body{
+  background-image: url(https://img.freepik.com/free-vector/summer-background-zoom_23-2148588915.jpg);
+  background-size: cover;
+}
+
+textarea{
+  width: 100%;
+  min-height: 20vh;
+}
+
+.title{
+  margin-top: 1em;
+  box-shadow: 2px -2px red;
+  width: fit-content;
+}
+
+.jumble-card{
+  background: whitesmoke;
+  border-radius: 15px;
+  border: .1em solid black;
+  padding: .6em;
+}
