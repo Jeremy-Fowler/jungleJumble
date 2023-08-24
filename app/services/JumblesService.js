@@ -1,5 +1,10 @@
 import { AppState } from "../AppState.js"
 import { Pop } from "../utils/Pop.js"
+import { saveState } from "../utils/Store.js"
+
+function _saveJumbles() {
+  saveState('jumbles', AppState.jumbles)
+}
 
 class JumblesService {
   startJumble() {
@@ -27,6 +32,7 @@ class JumblesService {
     if (jumble.fastestTime == null || jumble.fastestTime > jumble.elapsedTime) {
       jumble.fastestTime = jumble.elapsedTime
       Pop.success("You got the high score!!!!")
+      _saveJumbles()
     }
     AppState.activeJumble = null
     AppState.emit('jumbles')

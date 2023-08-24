@@ -1,13 +1,13 @@
 import { generateId } from "../utils/generateId.js";
 
 export class Jumble {
-  constructor ({ name, body }) {
+  constructor (data) {
     this.id = generateId()
-    this.name = name
-    this.body = body
-    this.fastestTime = null
-    this.startTime = null
-    this.endTime = null
+    this.name = data.name
+    this.body = data.body
+    this.fastestTime = data.fastestTime || null
+    this.startTime = data.startTime || null
+    this.endTime = data.endTime || null
   }
 
   get elapsedTime() {
